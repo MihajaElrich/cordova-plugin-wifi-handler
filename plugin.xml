@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-wifi-handler" version="0.0.1">
+    <name>WifiHandler</name>
+
+    <description>Cordova plugin that allowed users to rechieve and manage the wifi information.</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,wifi</keywords>
+    <repo>https://github.com/MihajaElrich/cordova-plugin-wifi-handler.git</repo>
+    <issue>https://github.com/MihajaElrich/wifiHandler/issues</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+  
+    <js-module src="www/wifiHandler.js" name="WifiHandler">
+        <clobbers target="window.plugins.WifiHandler" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="WifiHandler">
+                <param name="android-package" value="com.vntechnology.cordova.plugin.WifiHandler"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        </config-file>
+
+        <source-file src="src/android/WifiHandler.java" target-dir="src/com/vntechnology/cordova/plugin" />
+    </platform>
+</plugin>

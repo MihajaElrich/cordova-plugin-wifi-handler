@@ -1,0 +1,32 @@
+{
+    "name": "cordova-plugin-network-operator-information",
+    "version": "0.0.1",
+    "description": "Cordova plugin that allowed users to get the network provider information.",
+    "cordova": {
+      "id": "cordova-plugin-network-operator-information",
+      "platforms": [
+        "android"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/MihajaElrich/cordova-plugin-wifi-handler.git"
+    },
+    "keywords": [
+      "NetworkOperator",
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "engines": [
+      {
+        "name": "cordova",
+        "version": ">=3.0.0"
+      }
+    ],
+    "author": "Mihaja Elrich",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/MihajaElrich/wifiHandler/issues"
+    },
+    "homepage": "https://github.com/MihajaElrich/cordova-plugin-wifi-handler/"
+  }
